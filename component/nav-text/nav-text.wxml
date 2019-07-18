@@ -1,0 +1,14 @@
+<!--component/nav-text/nav-text.wxml-->
+<view style='width:750rpx;'>
+  <view>
+    <view class='topBar font-{{font_size}}' style='height:{{topBarH}}rpx;'>
+      <view class='statusBar' style='height:{{statusH}}rpx;'></view>
+      <view class="navigationBar" style='height:{{navigationH}}rpx;  line-height:{{navigationH}}rpx'>
+        <view class="back" wx:if="{{show_back}}"></view>
+        <view class="page-name">{{pageName}}</view>
+        <view class='navbar-title'>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

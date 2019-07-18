@@ -1,0 +1,2 @@
+<!--pages/login/sign.wxml-->
+<navbar pageName="注册" font_size="1" show_back="false"></navbar>

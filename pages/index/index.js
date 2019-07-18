@@ -10,5 +10,10 @@ Page({
   onLoad: function () {
   
   },
- 
+ //去注册
+  toSign: function(){
+    wx.navigateTo({
+      url: '/pages/login/sign',
+    })
+  }
 })

@@ -12,6 +12,24 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+
+    //获取设备顶部窗口的高度（不同设备窗口高度不一样，根据这个来设置自定义导航栏的高度）
+    wx.getSystemInfo({
+      success: (res) => {
+        this.globalData.width = res.screenWidth;
+        //根据px计算rpx
+        var sRpx = 750 / res.screenWidth;
+        this.globalData.sRpx = sRpx;
+        //状态栏高度转换rpx，设定状态栏高度
+        var statusBarH = res.statusBarHeight * sRpx;
+        this.globalData.statusH = statusBarH;
+        //设定导航栏+状态栏高度
+        this.globalData.navigationH = 88;
+      }
+    })
+
+    
     // 获取用户信息
     wx.getSetting({
       success: res => {
