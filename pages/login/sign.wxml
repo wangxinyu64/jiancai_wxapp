@@ -1,2 +1,22 @@
 <!--pages/login/sign.wxml-->
 <navbar pageName="注册" font_size="1" show_back="false"></navbar>
+
+<!-- 注册 -->
+<view class="login-container">
+    <view class="{{phone_input?'phone-focus':'phone'}}">
+        <view class="phone-area">+86</view>
+        <view class="phone-input"><input type="number" value="{{phone_number}}" placeholder="手机号" confirm-type maxlength="11" bindfocus="getFocus" bindinput="getPhoneNumber" bindblur="inputBlur"></input></view>
+        <view class="cancel" wx:if="{{phone_number!=''}}" catchtap="cancelInput">×</view>
+    </view>
+
+    <view class="auth-code">
+        <view class="auth-code-input"><input type="number" placeholder="验证码" confirm-type maxlength="6"></input></view>
+        <view class="get-code" bindtap="getCode">获取验证码</view>
+    </view>
+</view>
+<!-- 提交注册 -->
+<view class="submit-btn-no">
+     注册
+</view>
+
+<view class="bg"><image src="/images/login.png"></image></view>

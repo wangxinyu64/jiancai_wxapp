@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    phone_input: false,  //手机号输入框是否获取了焦点
+    phone_number:'',      //输入的手机号
   },
 
   /**
@@ -62,5 +63,31 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //当手机号输入框-获取焦点
+  getFocus: function() {
+    this.setData({
+      phone_input: true
+    })
+  },
+  //监听手机号输入
+  getPhoneNumber: function(e) {
+    this.setData({
+      phone_number: e.detail.value
+    })
+  },
+  //当手机号输入框-失去焦点
+  inputBlur: function(e) {
+    if(e.detail.value ==''){
+      this.setData({
+        phone_input:false
+      })
+    }
+  },
+  //点击 X 清空输入框
+  cancelInput: function() {
+    this.setData({
+      phone_number:''
+    })
   }
 })
