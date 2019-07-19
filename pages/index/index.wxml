@@ -1,3 +1,110 @@
 <!--index.wxml-->
 
-<button bindtap="toSign">注册</button>
+<!-- 顶部定位 搜索 扫一扫 -->
+<view class="top-tools-container" style="position:absolute;top:0px">
+  <view style="height:{{statusBarHeight}}rpx; width:750rpx"></view>
+  <view class="tools-con" style="height:{{44*sRpx}}rpx;">
+    <!-- 定位 -->
+    <view class="location">
+      <view class="now-location">首页</view>  
+      <!-- <view class="location-icon">
+        <image src="/images/sanjiao.png"></image>
+      </view> -->
+    </view>
+    <!-- 搜索 -->
+    <view class="index-search">
+      <view class="search-input">
+        <input type="text" value="{{keywords}}" bindinput="searchInput" confirm-type="search" bindfocus="hideSearchIcon"  bindblur="showSearchIcon" bindconfirm="searchKeywords"></input>
+      </view>
+      <view class="search-icon" wx:if="{{show_search}}">
+        <image src="/images/sousuo.png"></image>搜索
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="banner-box">
+  <view style="height:{{statusBarHeight+44}}px;"></view>
+  <!-- banner -->
+  <view class="banner-container">
+    <view class="banner">
+      <swiper indicator-dots='false' autoplay="true" interval="5000" duration="300" easing-function="easeInOutCubic" bindchange="swiperChange">
+        <block wx:for="{{banner_array}}" wx:key="item">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!-- 背景图 -->
+  <view class="banner-bac">
+    <image src="{{banner_array[swiper_item]}}" mode="aspectFit"></image>
+     <!-- <swiper  autoplay="true" interval="5000" duration="300" easing-function="easeInOutCubic">
+        <block>
+          <swiper-item>
+            <image src="{{banner_array[swiper_item]}}" class="slide-image" width="355" height="150" />
+          </swiper-item>
+        </block>
+      </swiper> -->
+  </view>
+  <!-- 凹陷圆形 -->
+  <view class="banner-bottom"></view>
+</view>
+
+
+<!-- 分类 -->
+<view class="index-menu-container">
+  <view class="menu-bg">
+    <view class="menu-item" catchtap='toCategory'>
+      <view class="menu-icon" >
+        <image src="/images/cat2.png" style=""></image>
+      </view>
+      <view class="menu-name">类目一</view>
+    </view>
+    <view class="menu-item">
+      <view class="menu-icon" >
+        <image src="/images/cat2.png" style=""></image>
+      </view>
+      <view class="menu-name">类目一</view>
+    </view>
+    <view class="menu-item">
+      <view class="menu-icon">
+        <image src="/images/cat2.png"></image>
+      </view>
+      <view class="menu-name">类目一</view>
+    </view>
+    <view class="menu-item">
+      <view class="menu-icon" >
+        <image src="/images/cat2.png" style=""></image>
+      </view>
+      <view class="menu-name">类目一</view>
+    </view>
+
+  </view>
+</view>
+<!-- 推荐 -->
+<view class="recomend-container">
+    <view class="rec-title">推荐</view>
+    <view class="rec-item">
+        <view class="rec-img"><image src="/images/cat3.png"></image></view>
+        <view class="rec-info-container">
+              <view class="rec-name">自定义推荐名称自定义推荐名称自定义推荐名称</view>
+              <view class="rec-style">风格: <text>山水画</text></view>
+              <view class="rec-color">色系： <text></text></view>
+              <view class="rec-price">¥ 2000</view>
+         </view>
+    </view>
+
+     <view class="rec-item">
+        <view class="rec-img"><image src="/images/cat3.png"></image></view>
+        <view class="rec-info-container">
+              <view class="rec-name">自定义推荐名称自定义推荐名称自定义推荐名称</view>
+              <view class="rec-style">风格: <text>山水画</text></view>
+              <view class="rec-color">色系： <text></text></view>
+              <view class="rec-price">¥ 2000</view>
+         </view>
+    </view>
+    
+   
+</view>

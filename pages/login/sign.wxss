@@ -53,6 +53,15 @@
   margin: 0 auto;
   margin-top: 60rpx;
 }
+.code-focus{
+  width: 591rpx;
+  height: 95rpx;
+  background:rgba(255,255,255,1);
+  border-radius:4px;
+  margin: 0 auto;
+  margin-top: 60rpx;
+ border:2px solid rgba(180,157,100,1);
+}
 .auth-code-input{
   position: relative;
   float: left;
@@ -89,7 +98,7 @@
   text-align: center;
   font-family:PingFangSC-Light;
   font-weight:300;
-  color:rgba(180,157,100,1);
+  color:rgba(180,157,100,0.5);
 }
 .submit-btn-yes{
   width: 591rpx;
@@ -101,8 +110,8 @@
   border-radius:4px;
   font-size:26rpx;
   text-align: center;
-  font-family:PingFangSC-Light;
-  font-weight:300;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
   color:rgba(180,157,100,1);
 }
 .cancel{

@@ -1,2 +1,42 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<navbar pageName="消息"></navbar>
+
+<view class="msg-list-container">
+      <view class="msg-item">
+        <view class="logo-sys"><image src="/images/xiaoxi.png"></image></view>
+        <view class="msg-text-con">
+            <view class="msg-name">系统通知</view>
+            <view class="msg-text">您的订单135432454545已发货,考虑圣诞节快乐撒娇的思考了</view>
+        </view>
+        <view class="msg-detail">
+            <view class="time">12:21</view>
+            <view class="dot">2</view>
+        </view>
+    </view>
+
+ <view class="msg-item">
+        <view class="logo-order"><image src="/images/dingd.png"></image></view>
+        <view class="msg-text-con">
+            <view class="msg-name">订单通知</view>
+            <view class="msg-text">您的订单135432454545已发货</view>
+        </view>
+        <view class="msg-detail">
+            <view class="time">12:21</view>
+            <view class="dot">2</view>
+        </view>
+    </view>
+
+  
+     <view class="msg-item">
+        <view class="logo"><image src=""></image></view>
+        <view class="msg-text-con">
+            <view class="msg-name">用户昵称</view>
+            <view class="msg-text">摘要信息</view>
+        </view>
+        <view class="msg-detail">
+            <view class="time">12:21</view>
+            <view class="dot">2</view>
+        </view>
+    </view>
+    
+</view>

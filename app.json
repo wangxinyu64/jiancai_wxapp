@@ -5,7 +5,8 @@
     "pages/login/sign",
     "pages/message/message",
     "pages/shopping_cart/shopping_cart",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/store/category"
   ],
   "window": {
     "backgroundTextStyle": "light",

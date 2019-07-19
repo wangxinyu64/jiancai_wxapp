@@ -9,13 +9,13 @@
         <view class="cancel" wx:if="{{phone_number!=''}}" catchtap="cancelInput">×</view>
     </view>
 
-    <view class="auth-code">
-        <view class="auth-code-input"><input type="number" placeholder="验证码" confirm-type maxlength="6"></input></view>
-        <view class="get-code" bindtap="getCode">获取验证码</view>
+    <view class="{{code_input?'code-focus':'auth-code'}}">
+        <view class="auth-code-input"><input type="number" placeholder="验证码" confirm-type maxlength="6" bindfocus="codeGetFocus" bindinput="inputCode" bindblur="codeIputBlur"></input></view>
+        <view class="get-code" bindtap="getCode">{{code_flag == 0?'获取验证码':time+'s后重试'}}</view>
     </view>
 </view>
 <!-- 提交注册 -->
-<view class="submit-btn-no">
+<view class="{{phone_number&&code?'submit-btn-yes':'submit-btn-no'}}"  bindtap="signUser">
      注册
 </view>
 
