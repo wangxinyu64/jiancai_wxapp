@@ -1,0 +1,43 @@
+<!--pages/store/category-detail.wxml-->
+<view class="banner-container">
+  <swiper>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" mode="aspect" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="goods-info-container">
+    <view class="goods-navigation">
+        <view class="navigation"><text>一级类目</text>><text>二级类目</text>><text>三级类目</text></view>
+        <view class="goods-sales">销量： 3432</view>
+    </view>
+    <view class="goods-name">自定义名称自定义名称自定义名称自定义名称自定义名称自定义名称自定义名称自定义名称自定义名称自定义名称</view>
+    <view class="goods-style">风格：<text>山水画</text></view>
+    <view class="goods-color">色系：<text></text></view>
+    <view class="goods-size">尺寸：<text>2.0m x 2.1m</text><view class="more"><image src="/images/more2.png"></image></view></view>
+</view>
+
+<view class="goods-detail-container">
+    <view class="detail-title">商品详情</view>
+    <view class="goods-images">
+        <image mode="widthFix" src="/images/cat1.png"></image>
+        <image mode="widthFix" src="/images/cat2.png"></image>
+        <image mode="widthFix" src="/images/cat3.png"></image>
+    </view>
+</view>
+
+<view class="bottom-container">
+    <view class="price">
+        <text class="pre-price">¥ 39999</text>
+        <text class="now-price">¥ 20000</text>
+    </view>
+    <view class="buy-button">
+        <view class="push-cart">加入购物车</view>
+        <view class="buy-now">立即购买</view>
+    </view>
+</view>
+
+<view style="height:98rpx;"></view>

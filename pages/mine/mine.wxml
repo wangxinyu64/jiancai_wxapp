@@ -23,7 +23,7 @@
         <view class="panel-more"><image src="/images/more2.png"></image></view>
     </view>
 
-    <view class="panel-item">
+    <view class="panel-item" bindtap="toAddAddress">
         <view class="panel-icon"><image src="/images/address.png"></image></view>
         <view class="panel-name">我的收货地址</view>
         <view class="panel-more"><image src="/images/more2.png"></image></view>
@@ -34,7 +34,7 @@
 <view class="my-order-con">
     <view class="order-title">
         <text class="title">我的订单</text>
-        <view class="all-order">
+        <view class="all-order" bindtap="toAllorder">
             <text>查看全部订单</text>
             <view class="more-order">
                 <image src="/images/more3.png"></image>

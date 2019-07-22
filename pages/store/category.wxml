@@ -1,6 +1,5 @@
 <!--pages/store/category.wxml-->
-<view class="shop-bg">
-  <!-- <image class="bg" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image> -->
+<view class="shop-bg" style="width:100%;height:{{navigationH}}px">
   <view class="status-bar" style="width:100%;height:{{statusBarHeight}}rpx"></view>
   <view class="nav-tool" style="top:{{statusBarHeight}}rpx;width:750rpx;height:{{44*sRpx}}rpx;line-height:{{44*sRpx}}rpx;">
       <view class="back" bindtap="back"><image src="/images/backhei.png"></image></view>
@@ -10,19 +9,23 @@
             <image src="/images/search1.png"></image>
             <view class="search-text">搜索</view>
         </view> 
-      </view>
+      </view> 
   </view>
 </view>
 
 <view class="category-container">
     <view class="second-category">
-        <view class="second-item" wx:for="{{second_category}}">
-            <view class="second-text">二级类目</view>
+        <view class="second-item {{item.id == second_category_id?'second-active':''}}" wx:for="{{second_category}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="secondCategoryTap">
+            <view class="second-text">{{item.name}}</view>
         </view>
     </view>
     <view class="third-category">
-         <view class="third-item" wx:for="{{third_category}}">
-            <view class="third-text">二级类目</view>
+         <view class="third-item" wx:for="{{third_category}}" wx:key="{{item.id}}" data-="{{item.id}}" bindtap="toThirdCategoryDetail">
+              <view class="third-img">
+                 <image src="{{item.url}}"></image>
+              </view>
+             <view class="third-text">{{item.name}}</view>
         </view>
+       
     </view>
 </view>

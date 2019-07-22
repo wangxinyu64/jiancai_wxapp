@@ -4,8 +4,8 @@
     <view class='topBar font-{{font_size}}' style='height:{{topBarH}}rpx;'>
       <view class='statusBar' style='height:{{statusH}}rpx;'></view>
       <view class="navigationBar" style='height:{{navigationH}}rpx;  line-height:{{navigationH}}rpx'>
-        <view class="back" wx:if="{{show_back}}"></view>
-        <view class="page-name">{{pageName}}</view>
+        <view class="back" style='line-height:{{navigationH}}rpx' bindtap="back" wx:if="{{show_back}}"><image src="/images/backhei.png"></image></view>
+        <view class="page-name" style='line-height:{{navigationH}}rpx'>{{pageName}}</view>
         <view class='navbar-title'>
         </view>
       </view>

@@ -1,11 +1,11 @@
-// pages/mine/mine.js
+// pages/store/category-detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imgUrls:['/images/cat3.png']
   },
 
   /**
@@ -25,7 +25,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () { 
+  onShow: function () {
 
   },
 
@@ -62,18 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  //添加收货地址
-  toAddAddress: function(){
-    wx.navigateTo({
-      url: '../address/add-address',
-    })
-  },
-
-  //跳转全部订单
-  toAllorder: function() {
-    wx.navigateTo({
-      url: '/pages/order/all-order',
-    })
   }
 })

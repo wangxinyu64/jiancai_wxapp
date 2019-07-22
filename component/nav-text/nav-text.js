@@ -24,6 +24,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
-  }
+    back: function () {
+      wx.navigateBack({
+        delta: 1
+      })
+    }
+  },
+ 
 })

@@ -1,2 +1,4 @@
 <!--pages/shopping_cart/shopping_cart.wxml-->
-<text>pages/shopping_cart/shopping_cart.wxml</text>
+<navbar pageName="购物车" show_back="true" ></navbar>
+
+<view class=""></view>

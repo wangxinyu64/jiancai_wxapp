@@ -1,0 +1,24 @@
+<!--pages/address/add-address.wxml-->
+<navbar pageName="添加收货地址" font_size="0" show_back="true"></navbar>
+
+<view class="address-info-container">
+    <view class="addr-name">
+        <view class="addr-title">收货人</view>
+        <view class="input-con"><input type="text"></input></view>
+    </view>
+     <view class="addr-name">
+        <view class="addr-title">手机号码</view>
+        <view class="input-con"><input type="number"></input></view>
+    </view>
+    <view class="addr-detail">
+        <view class="addr-title">所在地区</view>
+        <view class="more"><image src="/images/more2.png"></image></view>
+    </view>
+    <view class="detail">
+        <textarea value="" placeholder="详细地址：如道路、门牌号、小区、楼栋号、单元、室等"></textarea>
+    </view>
+</view>
+<view class="default-addr">
+    <view class="default-title">设为默认地址</view>
+    <view class="set-default"><switch color="#B3985E" bindchange=""></switch></view>
+</view>

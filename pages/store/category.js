@@ -6,10 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    statusBarHeight: 0,  //状态栏高度
+    statusBarHeight: 0,  //状态栏高度  
     sRpx: 0,
     navigationH: 0,
-    second_category:[1,2,3,4,5,6,7,8,9]
+    second_category:[
+      { name: '建材', id: 0,},
+      { name: '门窗', id: 1,},
+      { name: '沙发', id: 2,},
+      { name: '窗帘', id: 3,}
+    ],
+    third_category: [
+      { name: '五金', url: '/images/cat1.png', id: 0 },
+      { name: '三级类目', url: '/images/cat2.png', id: 1 },
+      { name: '五金', url: '/images/cat1.png', id: 2 },
+      { name: '三级类目', url: '/images/cat2.png', id: 3 },
+    ],
+    second_category_id: 0,       //当前点击的二级类目id 
   },
 
   /**
@@ -75,6 +87,23 @@ Page({
   back: function() {
     wx.navigateBack({
       delta:1
+    })
+  },
+
+  //点击二级类目
+  secondCategoryTap: function(e) {
+    var that = this;
+    var second_category_id = e.currentTarget.dataset.id;
+    this.setData({
+      second_category_id: second_category_id
+    })
+  },
+
+  //点击三级类目
+  toThirdCategoryDetail: function(e) {
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: './category-detail',
     })
   }
 })

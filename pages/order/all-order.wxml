@@ -1,0 +1,2 @@
+<!--pages/order/all-order.wxml-->
+<navbar pageName="全部订单" show_back="true"></navbar>

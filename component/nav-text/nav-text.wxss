@@ -40,7 +40,7 @@
 .page-name {
   float: left;
   margin-left: 20rpx;
-  font-size: 40rpx;
+  /* font-size: 40rpx; */
   font-family: PingFangSC-Regular;
   font-weight: bold;
   color: #000;
@@ -76,4 +76,15 @@
 .return {
   width: 24rpx;
   height: 40rpx;
+}
+.back{
+  float: left;
+  margin-left: 20rpx;
+  width: 43rpx;
+  height: 100%;
+}
+.back image{
+  width: 23rpx;
+  height: 40rpx;
+  vertical-align: middle;
 }

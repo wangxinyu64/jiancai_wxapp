@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+// pages/order/all-order.js
 Page({
 
   /**
@@ -25,7 +25,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () { 
+  onShow: function () {
 
   },
 
@@ -62,18 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  //添加收货地址
-  toAddAddress: function(){
-    wx.navigateTo({
-      url: '../address/add-address',
-    })
-  },
-
-  //跳转全部订单
-  toAllorder: function() {
-    wx.navigateTo({
-      url: '/pages/order/all-order',
-    })
   }
 })
