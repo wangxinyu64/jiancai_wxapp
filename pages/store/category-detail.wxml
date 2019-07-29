@@ -1,12 +1,15 @@
 <!--pages/store/category-detail.wxml-->
 <view class="banner-container">
+  <view class="swiper">
   <swiper>
     <block wx:for="{{imgUrls}}">
       <swiper-item>
         <image src="{{item}}" mode="aspect" class="slide-image" />
-      </swiper-item>
+      </swiper-item> 
     </block>
   </swiper>
+  </view>
+  <view class="back" catchtap="backOne" style="top:{{statusBarHeight+22}}rpx;z-index:9999" ><image catchtap="backOne" src="/images/backhei.png"></image></view>
 </view>
 
 <view class="goods-info-container">

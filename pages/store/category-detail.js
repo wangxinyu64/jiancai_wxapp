@@ -1,18 +1,26 @@
 // pages/store/category-detail.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls:['/images/cat3.png']
+    statusBarHeight:  0,  //状态栏高度
+    sRpx: 0,
+    navigationH: 0,
+    imgUrls:['/images/cat2.png'],
   },
-
+ 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      statusBarHeight: app.globalData.statusH,  //状态栏高度
+      sRpx: app.globalData.sRpx,
+      navigationH: app.globalData.navigationH
+    })
   },
 
   /**
@@ -62,5 +70,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //返回
+  backOne: function() {
+    console.log('back')
+    wx.navigateBack({
+      delta: 1,
+    })
   }
 })
